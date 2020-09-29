@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import TodoList from "./components/TodoList";
+import VisibleTodoList from "./containers/VisibleTodoList";
 import AddTodo from "./components/AddTodo";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   // const [todos, setTodos] = useState([
@@ -15,8 +15,9 @@ function App() {
   return (
     <div>
       <AddTodo />
-      {/* <TodoList visibilityFilter={visibilityFilter} />
-      <Footer setVisibilityFilter={setVisibilityFilter} /> */}
+      <VisibleTodoList />
+      {/* <TodoList visibilityFilter={visibilityFilter} /> */}
+      {/* <Footer setVisibilityFilter={setVisibilityFilter} /> */}
     </div>
   );
 }

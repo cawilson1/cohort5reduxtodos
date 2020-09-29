@@ -12,25 +12,35 @@ function checkIfRender(visibilityFilter, completed) {
   }
 }
 
-const TodoList = ({ todos, setTodos, visibilityFilter }) => {
+const TodoList = ({ todos }) => {
   return (
     <div>
-      {todos.map(todo =>
-        checkIfRender(visibilityFilter, todo.completed) ? (
-          <Todo
-            id={todo.id}
-            text={todo.text}
-            completed={todo.completed}
-            setTodos={setTodos}
-            todos={todos}
-            visibilityFilter={visibilityFilter}
-          />
-        ) : (
-          <></>
-        )
-      )}
+      {todos.map(todo => (
+        <Todo id={todo.id} text={todo.text} completed={todo.completed} />
+      ))}
     </div>
   );
 };
+
+// const TodoList = ({ todos, setTodos, visibilityFilter }) => {
+//   return (
+//     <div>
+//       {todos.map(todo =>
+//         checkIfRender(visibilityFilter, todo.completed) ? (
+//           <Todo
+//             id={todo.id}
+//             text={todo.text}
+//             completed={todo.completed}
+//             setTodos={setTodos}
+//             todos={todos}
+//             visibilityFilter={visibilityFilter}
+//           />
+//         ) : (
+//           <></>
+//         )
+//       )}
+//     </div>
+//   );
+// };
 
 export default TodoList;
