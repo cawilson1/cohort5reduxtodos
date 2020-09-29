@@ -1,17 +1,11 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { addTodo } from "../actions";
 
-const AddTodo = ({ setTodos, todos }) => {
+const AddTodo = ({ dispatch }) => {
   const [form, setForm] = useState("");
   function addTodoClearForm() {
-    const todosLength = todos.length;
-    setTodos([
-      ...todos,
-      {
-        id: todosLength,
-        text: form,
-        completed: false
-      }
-    ]);
+    dispatch(addTodo(form));
     setForm("");
   }
   return (
@@ -22,4 +16,4 @@ const AddTodo = ({ setTodos, todos }) => {
   );
 };
 
-export default AddTodo;
+export default connect()(AddTodo);

@@ -7,8 +7,6 @@ const Todo = ({ id, text, completed, setTodos, todos }) => {
         onClick={() => {
           setTodos(
             todos.map(todo => {
-              console.log(id === todo.id);
-              console.log({ ...todo });
               return id === todo.id
                 ? { ...todo, completed: !todo.completed }
                 : todo;
