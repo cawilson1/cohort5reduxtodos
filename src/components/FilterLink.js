@@ -1,9 +1,9 @@
 import React from "react";
 
-const FilterLink = ({ filter, setVisibilityFilter }) => {
+const FilterLink = ({ filter, boundVisibilityFilter, active }) => {
   return (
     <div>
-      <button onClick={() => setVisibilityFilter(filter)}>{filter}</button>
+      <button onClick={() => boundVisibilityFilter()}>{filter}</button>
     </div>
   );
 };

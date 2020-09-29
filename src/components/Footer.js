@@ -1,19 +1,13 @@
 import React from "react";
-import FilterLink from "./FilterLink";
+import FilterLinkContainer from "../containers/FilterLinkContainer";
 
-const Footer = ({ setVisibilityFilter }) => {
+const Footer = () => {
   return (
     <div>
       Show:
-      <FilterLink setVisibilityFilter={setVisibilityFilter} filter="SHOW_ALL" />
-      <FilterLink
-        setVisibilityFilter={setVisibilityFilter}
-        filter="SHOW_COMPLETED"
-      />
-      <FilterLink
-        setVisibilityFilter={setVisibilityFilter}
-        filter="SHOW_ACTIVE"
-      />
+      <FilterLinkContainer filter="SHOW_ALL" />
+      <FilterLinkContainer filter="SHOW_COMPLETED" />
+      <FilterLinkContainer filter="SHOW_ACTIVE" />
     </div>
   );
 };
