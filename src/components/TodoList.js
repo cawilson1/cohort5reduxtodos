@@ -12,11 +12,16 @@ function checkIfRender(visibilityFilter, completed) {
   }
 }
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, boundToggleTodo }) => {
   return (
     <div>
       {todos.map(todo => (
-        <Todo id={todo.id} text={todo.text} completed={todo.completed} />
+        <Todo
+          id={todo.id}
+          text={todo.text}
+          completed={todo.completed}
+          boundToggleTodo={boundToggleTodo}
+        />
       ))}
     </div>
   );
