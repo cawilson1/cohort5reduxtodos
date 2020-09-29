@@ -12,7 +12,7 @@ const AddTodo = ({ setTodos, todos }) => {
         completed: false
       }
     ]);
-    //resetForm
+    setForm("");
   }
   return (
     <div>
